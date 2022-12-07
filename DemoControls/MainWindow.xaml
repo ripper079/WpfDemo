@@ -1,0 +1,197 @@
+﻿<Window x:Class="DemoControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450" Background="BlanchedAlmond">
+    <!--<Grid>
+        --><!--TextBlock-->
+        <!--<TextBlock x:Name="myTextBlock">
+            <Bold>Hello</Bold> World!
+            <LineBreak />
+            Where do you want to go today?
+            <LineBreak />
+            Go to <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://duckduckgo.com/">duckduckgo.com</Hyperlink>
+        </TextBlock>-->
+        
+        <!--<TextBlock TextTrimming="WordEllipsis">-->
+        <!--<TextBlock TextWrapping="Wrap" Foreground="Green">
+            Lorem ipsum dolor sit amet, <Span Foreground="Red">consectetur</Span> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sit amet commodo nulla facilisi nullam vehicula. Quam pellentesque nec nam aliquam sem et tortor. Aliquam purus sit amet luctus. Auctor eu augue ut lectus arcu bibendum. Et netus et malesuada fames. Risus nec feugiat in fermentum posuere urna nec tincidunt. Lacus vel facilisis volutpat est velit egestas. Sem nulla pharetra diam sit amet nisl suscipit. Donec ac odio tempor orci dapibus ultrices in iaculis nunc. Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. Tortor posuere ac ut consequat. Aliquam ultrices sagittis orci a scelerisque purus semper eget. Aenean pharetra magna ac placerat vestibulum lectus mauris. Metus aliquam eleifend mi in nulla posuere. Eget nullam non nisi est sit amet facilisis. Vel facilisis volutpat est velit egestas dui. Amet massa vitae tortor condimentum lacinia quis. Sed vulputate odio ut enim blandit volutpat maecenas volutpat. Aenean euismod elementum nisi quis eleifend quam adipiscing.            
+        </TextBlock>-->
+        
+        <!--<Label Content="Content Label">--> 
+        <!--Label-->
+            <!--Hello Label to the world-->
+        <!--</Label>-->
+        
+        <!--<Label BorderThickness="1" BorderBrush="Pink">
+            --><!-- StackPanel is a container --><!--
+            <StackPanel Orientation="Horizontal">
+                <Image Width="16" Source="https://cdn-icons-png.flaticon.com/512/542/542689.png"></Image>
+                <AccessText FontSize="16" Text="Mail"></AccessText>
+                <Button>Go To Mail Client</Button>
+            </StackPanel>    
+        </Label>--><!--        
+    </Grid>-->
+    
+
+    
+    <!--<StackPanel>
+        <TextBox 
+            FontSize="24" 
+            FontFamily="Comic Sans MS"
+            Text="Init Text" 
+            AcceptsReturn="True" 
+            SpellCheck.IsEnabled="True" 
+            Language="sv-SE" 
+            IsReadOnly="True" 
+            />
+    </StackPanel>-->
+    
+    
+    
+    <!-- Buttons and events -->
+    <!--<StackPanel>
+        <Button Click="Button_Change_Color_Label">Click me To toogle color on Label</Button>
+        <Button Click="Button_Increase_Font_Size_For_Label" ToolTip="Single Click - Small font increment" >Increase Font Size by One</Button>
+        <Button MouseDoubleClick="Button_Increase_Font_Size_ByTen_For_Label" ToolTip="Double Click - Large font increment" >Increase Font Size by 10</Button>
+        <Button Click="Button_Decrease_Font_Size_For_Label">Decrease Font Size</Button>
+        <Button 
+            MouseEnter="Button_Enter_Change_Background_Label" 
+            MouseLeave="Button_Leave_Change_Background_Label" 
+            >
+            Mouse Enter/Leave
+        </Button>
+        <Label x:Name="myLabel">Event Label Toogler</Label>
+    </StackPanel>-->
+
+
+
+    <!-- Radio button - One button may be pushed(active)  -->
+    <!-- Make sure to group them for a correct behaviour-->
+
+    <!--<StackPanel>
+        <Label x:Name="lbTrump" FontWeight="Bold" FontSize="32">Who do you vote for</Label>
+        <RadioButton x:Name="rbTrump" 
+                     IsChecked="True" 
+                     GroupName="Presidents" 
+                     Checked="president_selected" 
+                     Unchecked="president_unselected" 
+                     >Trump</RadioButton>
+        <RadioButton x:Name="rbObama" 
+                     GroupName="Presidents" 
+                     Checked="president_selected" 
+                     Unchecked="president_unselected" 
+                     >Obama</RadioButton>
+        <RadioButton x:Name="rbBiden" 
+                     GroupName="Presidents" 
+                     Checked="president_selected" 
+                     Unchecked="president_unselected"
+                     >Biden</RadioButton>
+        <RadioButton x:Name="rbBush" 
+                     GroupName="Presidents" 
+                     Checked="president_selected" 
+                     Unchecked="president_unselected"
+                     >Bush</RadioButton>
+        
+        <Label FontWeight="Bold">How do you feel about it</Label>
+        <RadioButton GroupName="Feeeling" VerticalContentAlignment="Center" FontSize="16" IsChecked="True">
+            <WrapPanel>
+                <Image Height="16" Source="https://cdn-icons-png.flaticon.com/512/9068/9068248.png" />
+                <Label>Ok</Label>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton GroupName="Feeeling" VerticalContentAlignment="Center" FontSize="16" >
+            <WrapPanel>
+                <Image Height="16" Source="https://cdn-icons-png.flaticon.com/512/4461/4461426.png" />
+                <Label>NOK</Label>
+            </WrapPanel>
+        </RadioButton>
+    </StackPanel>-->
+    
+    
+    
+    <!-- Checkboxes -->
+    <!--<StackPanel>
+        <Label FontWeight="Bold">Topings</Label>
+        <CheckBox>Extra Cheese</CheckBox>
+        <CheckBox>Tuna</CheckBox>
+        <CheckBox>Ham</CheckBox>
+        <CheckBox>Salami</CheckBox>
+    </StackPanel>-->
+
+    <!--<StackPanel>
+        <Label FontWeight="Bold" FontSize="18">Topings</Label>
+        
+        --><!-- Extra cheese --><!--
+        <CheckBox x:Name="cbExtraCheese" VerticalContentAlignment="Center" 
+                  Checked="cbExtraCheese_Checked"
+                  Unchecked="cbExtraCheese_Unchecked"
+            >
+            <WrapPanel>
+                <Image Width="24" Source="https://cdn-icons-png.flaticon.com/512/1384/1384727.png" />
+                <Label x:Name="lbExtraCheese" VerticalContentAlignment="Center">Extra Cheese</Label>
+            </WrapPanel>
+        </CheckBox>
+        --><!-- Tuna --><!--
+        <CheckBox x:Name="cbTuna" VerticalContentAlignment="Center" 
+                  
+            >
+            <WrapPanel>
+                <Image Width="24" Source="https://cdn-icons-png.flaticon.com/512/3183/3183488.png" />
+                <Label x:Name="lbTuna" VerticalContentAlignment="Center">Tuna</Label>
+            </WrapPanel>
+        </CheckBox>
+        --><!-- Ham --><!--
+        <CheckBox x:Name="cbHam" VerticalContentAlignment="Center" 
+                  
+            >
+            <WrapPanel>
+                <Image Width="24" Source="https://cdn-icons-png.flaticon.com/512/2112/2112031.png" />
+                <Label x:Name="lbHam" VerticalContentAlignment="Center">Ham</Label>
+            </WrapPanel>
+        </CheckBox>
+        --><!-- Salami --><!--
+        <CheckBox x:Name="cbSalami" VerticalContentAlignment="Center" 
+                  
+            >
+            <WrapPanel>
+                <Image Width="24" Source="https://cdn-icons-png.flaticon.com/512/2718/2718144.png" />
+                <Label x:Name="lbSalami" VerticalContentAlignment="Center">Salami</Label>
+            </WrapPanel>
+        </CheckBox>
+
+    </StackPanel>-->
+    
+    
+    
+    <!-- PasswordBox Controls -->
+    <!--<StackPanel Margin="10">
+        <Label FontSize="25">Name:</Label>
+        <TextBox FontSize="25"></TextBox>
+        <Label FontSize="25">Password:</Label>
+        <PasswordBox FontSize="25" 
+                     PasswordChar="*" 
+                     MinWidth="4" 
+                     MaxLength="8"
+                     ></PasswordBox>
+    </StackPanel>-->
+
+
+
+    <StackPanel>
+        <Image x:Name="imgBird" 
+               Width="150" 
+               Source="pack://application:,,,/Images/kivi.jpg" 
+               ToolTip="Click for toogle pictures" 
+               MouseUp="imgBird_MouseUp" 
+               >
+        </Image>
+    </StackPanel>
+    
+    
+    
+</Window>
+
