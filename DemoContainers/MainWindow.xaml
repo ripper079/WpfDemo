@@ -161,14 +161,41 @@
         </StackPanel>
     </ScrollViewer>-->
 
+    
+    
     <!-- Wrap to a new line - Resize window during runtime to better se effect -->
     <!-- Even possible to set orientation -->
-    <WrapPanel>
+    <!--<WrapPanel>
         <Button Width="500">Click Me</Button>
         <Button Width="150">Foo me Master again</Button>
         <Button Width="100">Click Me</Button>
         <Button Width="100">Click Me</Button>
-    </WrapPanel>
+    </WrapPanel>-->
 
+
+
+    <!-- Dock the item(s) to a particular position -->
+    <!--Last child fills the whole panel-->
+    <!--<DockPanel>
+        <Button DockPanel.Dock="Top">Top</Button>
+        <Button DockPanel.Dock="Bottom">Bottom</Button>
+        <Button DockPanel.Dock="Left">Left</Button>
+        <Button DockPanel.Dock="Right">Right</Button>
+        --><!--<Button DockPanel.Dock="Right">Second Right</Button>--><!--
+        <Image Source="https://uploads-ssl.webflow.com/62556a0719631bab2b0b9dfd/62cc33eac9af3f63c3ded0a7_instant-container-1-lightbox.jpg" />
+    </DockPanel>-->
+
+
+
+    <!--Custom drawing  -->
+    <Canvas>
+        <Button Canvas.Left="15">Click Me</Button>
+        <Button Canvas.Right="15">Foo Over</Button>
+        <Rectangle Width="100" Height="100" Fill="Chocolate" Canvas.Bottom="0" Canvas.Right="10"></Rectangle>
+
+        <Rectangle Panel.ZIndex="15"  Width="150" Height="150" Fill="GreenYellow" Canvas.Bottom="150" Canvas.Left="150"></Rectangle>
+        <Rectangle Panel.ZIndex="5" Width="220" Height="150" Fill="DarkKhaki" Canvas.Bottom="30" Canvas.Left="30"></Rectangle>
+        <Rectangle Panel.ZIndex="10"  Width="50" Height="150" Fill="DarkOrchid" Canvas.Bottom="20" Canvas.Left="160"></Rectangle>
+    </Canvas>
 
 </Window>
