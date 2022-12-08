@@ -180,8 +180,8 @@
     </StackPanel>-->
 
 
-
-    <StackPanel>
+    <!-- Image -->
+    <!--<StackPanel>
         <Image x:Name="imgBird" 
                Width="150" 
                Source="pack://application:,,,/Images/kivi.jpg" 
@@ -189,9 +189,68 @@
                MouseUp="imgBird_MouseUp" 
                >
         </Image>
+    </StackPanel>-->
+    
+    
+    
+    <!-- Slider  -->
+    <!--<StackPanel VerticalAlignment="Center" Margin="20">
+        <Slider 
+                x:Name="mySlider" 
+                ValueChanged="mySlider_ValueChanged"
+                Minimum="1" 
+                Maximum="100" 
+                TickPlacement="Both" 
+                TickFrequency="10" 
+                IsSnapToTickEnabled="True" 
+                Value="50"
+                >
+            
+        </Slider>
+        <TextBlock 
+            x:Name="myTextBlock">
+            
+        </TextBlock>
+    </StackPanel>-->
+    
+    <!-- Update the code with databinding insteed  -->
+    <!--<StackPanel VerticalAlignment="Center" Margin="20">
+        <Slider 
+                x:Name="mySlider" 
+                Minimum="1" 
+                Maximum="100" 
+                TickPlacement="Both" 
+                TickFrequency="10" 
+                IsSnapToTickEnabled="True" 
+                Value="50"
+                >
+
+        </Slider>
+        <TextBlock 
+            x:Name="myTextBlock" 
+            FontSize="{Binding ElementName=mySlider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
+            >
+            Hello World
+        </TextBlock>
+    </StackPanel>-->
+
+    <StackPanel>
+        <Calendar></Calendar>
+        <Viewbox Stretch="Uniform">
+            <Calendar 
+                x:Name="myCalendar" 
+                SelectedDate="12.16.2022" 
+                SelectedDatesChanged="myCalendar_SelectedDatesChanged"
+                >
+                <Calendar.BlackoutDates >
+                    <CalendarDateRange Start="12.24.2022" End="12.26.2022" />
+                </Calendar.BlackoutDates>
+                
+                
+            </Calendar>
+        </Viewbox>
+        <TextBlock x:Name="myTextBlock"></TextBlock>
     </StackPanel>
-    
-    
-    
+
 </Window>
 

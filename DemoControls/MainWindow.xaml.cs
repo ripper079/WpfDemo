@@ -30,6 +30,12 @@ namespace DemoControls
             //Modify properties from CodeBehind
             //myTextBlock.Background = Brushes.Purple;
             //BuildANewTextBlock();       //Overwrites existing one
+            GetSelectedDate();
+        }
+
+        private void GetSelectedDate() 
+        {
+            myTextBlock.Text= myCalendar.SelectedDate.ToString();
         }
 
         private void BuildANewTextBlock()
@@ -53,17 +59,56 @@ namespace DemoControls
             System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
         }
 
-        private void imgBird_MouseUp(object sender, MouseButtonEventArgs e)
+        private void myCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            toogleBirdPicture = !toogleBirdPicture;
+            if (myTextBlock != null) 
+            {
+                GetSelectedDate();       
+            }
 
-            string fileName = toogleBirdPicture ? "ostrich.jpg" : "kivi.jpg";
-
-            //string fileName = "ostrich.jpg";
-
-            imgBird.Source = new BitmapImage(
-                new Uri(@"/DemoControls;component/Images/" + fileName, UriKind.Relative));
         }
+
+        //private void imgBird_MouseUp(object sender, MouseButtonEventArgs e)
+        //{
+        //    toogleBirdPicture = !toogleBirdPicture;
+
+        //    string fileName = toogleBirdPicture ? "ostrich.jpg" : "kivi.jpg";
+
+        //    //string fileName = "ostrich.jpg";
+
+        //    imgBird.Source = new BitmapImage(
+        //        new Uri(@"/DemoControls;component/Images/" + fileName, UriKind.Relative));
+        //}
+
+        //private void mySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        //{
+        //    if (myTextBlock != null)
+        //    {
+        //        int sliderValue = (int)mySlider.Value;
+        //        double fontSize = (int)myTextBlock.FontSize;
+        //        if (sliderValue < 10)
+        //            fontSize = 10;
+        //        else if (sliderValue < 20)
+        //            fontSize = 14;
+        //        else if (sliderValue < 30)
+        //            fontSize = 18;
+        //        else if (sliderValue < 40)
+        //            fontSize = 22;
+        //        else if (sliderValue < 50)
+        //            fontSize = 26;
+        //        else if (sliderValue < 60)
+        //            fontSize = 30;
+        //        else if (sliderValue < 70)
+        //            fontSize = 34;
+        //        else if (sliderValue < 80)
+        //            fontSize = 38;
+        //        else
+        //            fontSize= 42;
+
+        //        myTextBlock.FontSize = fontSize;
+        //        myTextBlock.Text = "Slider value is " + mySlider.Value.ToString();
+        //    }
+        //}
 
         //private void cbExtraCheese_Checked(object sender, RoutedEventArgs e)
         //{
