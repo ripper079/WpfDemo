@@ -161,5 +161,14 @@
         </StackPanel>
     </ScrollViewer>-->
 
+    <!-- Wrap to a new line - Resize window during runtime to better se effect -->
+    <!-- Even possible to set orientation -->
+    <WrapPanel>
+        <Button Width="500">Click Me</Button>
+        <Button Width="150">Foo me Master again</Button>
+        <Button Width="100">Click Me</Button>
+        <Button Width="100">Click Me</Button>
+    </WrapPanel>
+
 
 </Window>
