@@ -189,7 +189,7 @@
 
     <!--Custom drawing  -->
     <Canvas>
-        <Button Canvas.Left="15">Click Me</Button>
+        <Button Canvas.Left="15">Click Me Please!</Button>
         <Button Canvas.Right="15">Foo Over</Button>
         <Rectangle Width="100" Height="100" Fill="Chocolate" Canvas.Bottom="0" Canvas.Right="10"></Rectangle>
 
