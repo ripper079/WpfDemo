@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="WPF in Visual Basic" Height="600" Width="1000" MinWidth="300" MinHeight="300">
     <Grid>
-        <local:ProductDetailControl />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="_Products" />
+                <Separator />
+                <MenuItem Header="E_xit" />
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Cu_t" />
+                <MenuItem Header="_Copy" />
+                <MenuItem Header="_Paste" />
+            </MenuItem>
+        </Menu>
+        
+        <local:ProductDetailControl Grid.Column="0" Grid.Row="1"/>
     </Grid>
 </Window>
