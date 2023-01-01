@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoControls", "DemoControl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoContainers", "DemoContainers\DemoContainers.csproj", "{B551CBAF-44F7-47D8-96B3-FD8AFC254C40}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Plur_WPF-for-the-visual-basic-programmer", "Plur_WPF-for-the-visual-basic-programmer\Plur_WPF-for-the-visual-basic-programmer.vbproj", "{B321C98B-DEF0-4BD8-A796-AB17AD77270E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B551CBAF-44F7-47D8-96B3-FD8AFC254C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B551CBAF-44F7-47D8-96B3-FD8AFC254C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B551CBAF-44F7-47D8-96B3-FD8AFC254C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B321C98B-DEF0-4BD8-A796-AB17AD77270E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B321C98B-DEF0-4BD8-A796-AB17AD77270E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B321C98B-DEF0-4BD8-A796-AB17AD77270E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B321C98B-DEF0-4BD8-A796-AB17AD77270E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,6 @@
-﻿<Window x:Class="DemoControls.MainWindow"
+﻿ <!--C# GUI Tutorial using WPF | XAML | - Windows Presentation Foundation
+https://www.youtube.com/watch?v=oSeYvMEH7jc-->
+    <Window x:Class="DemoControls.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -234,7 +236,7 @@
         </TextBlock>
     </StackPanel>-->
 
-    <StackPanel>
+    <!--<StackPanel>
         <Calendar></Calendar>
         <Viewbox Stretch="Uniform">
             <Calendar 
@@ -250,7 +252,17 @@
             </Calendar>
         </Viewbox>
         <TextBlock x:Name="myTextBlock"></TextBlock>
-    </StackPanel>
+    </StackPanel>-->
+
+    <Grid>
+        <DatePicker
+            SelectedDate="12/16/1979" 
+            SelectedDateFormat="Long" 
+            SelectedDateChanged="DatePicker_SelectedDateChanged"
+            >
+            
+        </DatePicker>
+    </Grid>
 
 </Window>
 

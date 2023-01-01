@@ -30,13 +30,13 @@ namespace DemoControls
             //Modify properties from CodeBehind
             //myTextBlock.Background = Brushes.Purple;
             //BuildANewTextBlock();       //Overwrites existing one
-            GetSelectedDate();
+            //GetSelectedDate();
         }
 
-        private void GetSelectedDate() 
-        {
-            myTextBlock.Text= myCalendar.SelectedDate.ToString();
-        }
+        //private void GetSelectedDate() 
+        //{
+        //    myTextBlock.Text= myCalendar.SelectedDate.ToString();
+        //}
 
         private void BuildANewTextBlock()
         {
@@ -59,122 +59,134 @@ namespace DemoControls
             System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
         }
 
-        private void myCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (myTextBlock != null) 
-            {
-                GetSelectedDate();       
-            }
+		private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+		{
 
-        }
+			if ((sender as DatePicker).SelectedDate != null) 
+			{
+				string userSelectedDate = (sender as DatePicker).SelectedDate.ToString();
+				MessageBox.Show($"Date has been changed to {userSelectedDate}");
 
-        //private void imgBird_MouseUp(object sender, MouseButtonEventArgs e)
-        //{
-        //    toogleBirdPicture = !toogleBirdPicture;
+			}
 
-        //    string fileName = toogleBirdPicture ? "ostrich.jpg" : "kivi.jpg";
+		}
 
-        //    //string fileName = "ostrich.jpg";
+		//private void myCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+		//{
+		//    if (myTextBlock != null)
+		//    {
+		//        GetSelectedDate();
+		//    }
 
-        //    imgBird.Source = new BitmapImage(
-        //        new Uri(@"/DemoControls;component/Images/" + fileName, UriKind.Relative));
-        //}
+		//}
 
-        //private void mySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        //{
-        //    if (myTextBlock != null)
-        //    {
-        //        int sliderValue = (int)mySlider.Value;
-        //        double fontSize = (int)myTextBlock.FontSize;
-        //        if (sliderValue < 10)
-        //            fontSize = 10;
-        //        else if (sliderValue < 20)
-        //            fontSize = 14;
-        //        else if (sliderValue < 30)
-        //            fontSize = 18;
-        //        else if (sliderValue < 40)
-        //            fontSize = 22;
-        //        else if (sliderValue < 50)
-        //            fontSize = 26;
-        //        else if (sliderValue < 60)
-        //            fontSize = 30;
-        //        else if (sliderValue < 70)
-        //            fontSize = 34;
-        //        else if (sliderValue < 80)
-        //            fontSize = 38;
-        //        else
-        //            fontSize= 42;
+		//private void imgBird_MouseUp(object sender, MouseButtonEventArgs e)
+		//{
+		//    toogleBirdPicture = !toogleBirdPicture;
 
-        //        myTextBlock.FontSize = fontSize;
-        //        myTextBlock.Text = "Slider value is " + mySlider.Value.ToString();
-        //    }
-        //}
+		//    string fileName = toogleBirdPicture ? "ostrich.jpg" : "kivi.jpg";
 
-        //private void cbExtraCheese_Checked(object sender, RoutedEventArgs e)
-        //{
-        //    //lbExtraCheese.FontSize += 2;
-        //    lbExtraCheese.FontWeight = FontWeights.Bold;
-        //    lbExtraCheese.Background = Brushes.LightGreen;
-        //}
+		//    //string fileName = "ostrich.jpg";
 
-        //private void cbExtraCheese_Unchecked(object sender, RoutedEventArgs e)
-        //{
-        //    //lbExtraCheese.FontSize -= 2;
-        //    lbExtraCheese.FontWeight = FontWeights.Normal;
-        //    lbExtraCheese.Background = Brushes.BlanchedAlmond;
-        //}
+		//    imgBird.Source = new BitmapImage(
+		//        new Uri(@"/DemoControls;component/Images/" + fileName, UriKind.Relative));
+		//}
 
-        //private void president_selected(object sender, RoutedEventArgs e)
-        //{
-        //    RadioButton selectedRadioButton = (RadioButton)sender;
+		//private void mySlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		//{
+		//    if (myTextBlock != null)
+		//    {
+		//        int sliderValue = (int)mySlider.Value;
+		//        double fontSize = (int)myTextBlock.FontSize;
+		//        if (sliderValue < 10)
+		//            fontSize = 10;
+		//        else if (sliderValue < 20)
+		//            fontSize = 14;
+		//        else if (sliderValue < 30)
+		//            fontSize = 18;
+		//        else if (sliderValue < 40)
+		//            fontSize = 22;
+		//        else if (sliderValue < 50)
+		//            fontSize = 26;
+		//        else if (sliderValue < 60)
+		//            fontSize = 30;
+		//        else if (sliderValue < 70)
+		//            fontSize = 34;
+		//        else if (sliderValue < 80)
+		//            fontSize = 38;
+		//        else
+		//            fontSize= 42;
 
-        //    selectedRadioButton.FontSize += 2;
-        //}
+		//        myTextBlock.FontSize = fontSize;
+		//        myTextBlock.Text = "Slider value is " + mySlider.Value.ToString();
+		//    }
+		//}
 
-        //private void president_unselected(object sender, RoutedEventArgs e)
-        //{
-        //    RadioButton selectedRadioButton = (RadioButton)sender;
+		//private void cbExtraCheese_Checked(object sender, RoutedEventArgs e)
+		//{
+		//    //lbExtraCheese.FontSize += 2;
+		//    lbExtraCheese.FontWeight = FontWeights.Bold;
+		//    lbExtraCheese.Background = Brushes.LightGreen;
+		//}
 
-        //    selectedRadioButton.FontSize -= 2;
+		//private void cbExtraCheese_Unchecked(object sender, RoutedEventArgs e)
+		//{
+		//    //lbExtraCheese.FontSize -= 2;
+		//    lbExtraCheese.FontWeight = FontWeights.Normal;
+		//    lbExtraCheese.Background = Brushes.BlanchedAlmond;
+		//}
 
-        //}
+		//private void president_selected(object sender, RoutedEventArgs e)
+		//{
+		//    RadioButton selectedRadioButton = (RadioButton)sender;
 
-        //Button and events
+		//    selectedRadioButton.FontSize += 2;
+		//}
 
-        //private void Button_Change_Color_Label(object sender, RoutedEventArgs e)
-        //{
-        //    if (myLabel.Foreground != Brushes.YellowGreen)
-        //        myLabel.Foreground = Brushes.YellowGreen;
-        //    else
-        //        myLabel.Foreground = Brushes.DarkBlue;
-        //}
+		//private void president_unselected(object sender, RoutedEventArgs e)
+		//{
+		//    RadioButton selectedRadioButton = (RadioButton)sender;
 
-        //private void Button_Increase_Font_Size_For_Label(object sender, RoutedEventArgs e)
-        //{
-        //    myLabel.FontSize++;
-        //}
+		//    selectedRadioButton.FontSize -= 2;
 
-        //private void Button_Decrease_Font_Size_For_Label(object sender, RoutedEventArgs e)
-        //{
-        //    if (! (myLabel.FontSize == 1))
-        //        myLabel.FontSize--;
-        //}
+		//}
 
-        //private void Button_Increase_Font_Size_ByTen_For_Label(object sender, MouseButtonEventArgs e)
-        //{
-        //    myLabel.FontSize += 10;
-        //}
+		//Button and events
 
-        //private void Button_Enter_Change_Background_Label(object sender, MouseEventArgs e)
-        //{
-        //    myLabel.Background = Brushes.DarkKhaki;
-        //}
+		//private void Button_Change_Color_Label(object sender, RoutedEventArgs e)
+		//{
+		//    if (myLabel.Foreground != Brushes.YellowGreen)
+		//        myLabel.Foreground = Brushes.YellowGreen;
+		//    else
+		//        myLabel.Foreground = Brushes.DarkBlue;
+		//}
 
-        //private void Button_Leave_Change_Background_Label(object sender, MouseEventArgs e)
-        //{
-        //    myLabel.Background = Brushes.Coral;
-        //}
+		//private void Button_Increase_Font_Size_For_Label(object sender, RoutedEventArgs e)
+		//{
+		//    myLabel.FontSize++;
+		//}
+
+		//private void Button_Decrease_Font_Size_For_Label(object sender, RoutedEventArgs e)
+		//{
+		//    if (! (myLabel.FontSize == 1))
+		//        myLabel.FontSize--;
+		//}
+
+		//private void Button_Increase_Font_Size_ByTen_For_Label(object sender, MouseButtonEventArgs e)
+		//{
+		//    myLabel.FontSize += 10;
+		//}
+
+		//private void Button_Enter_Change_Background_Label(object sender, MouseEventArgs e)
+		//{
+		//    myLabel.Background = Brushes.DarkKhaki;
+		//}
+
+		//private void Button_Leave_Change_Background_Label(object sender, MouseEventArgs e)
+		//{
+		//    myLabel.Background = Brushes.Coral;
+		//}
 
 
-    }
+	}
 }

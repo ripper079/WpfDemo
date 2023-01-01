@@ -1,4 +1,6 @@
-﻿<!-- Line breaks does NOT matter -->
+﻿ <!--https://www.youtube.com/watch?v=gSfMNjWNoX0
+Intro to WPF: Learn the basics and best practices of WPF for C#-->
+    <!-- Line breaks does NOT matter -->
 <Window x:Class="wpfDotNetFrameWork.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
