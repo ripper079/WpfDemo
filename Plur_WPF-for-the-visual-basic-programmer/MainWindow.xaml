@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Plur_WPF_for_the_visual_basic_programmer"
         mc:Ignorable="d"
         Title="WPF in Visual Basic" Height="600" Width="1000" MinWidth="300" MinHeight="300">
-    <Grid>
+    <Grid x:Name="gridContentArea">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -15,9 +15,9 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Menu>
+        <Menu Grid.Column="0" Grid.Row="0">
             <MenuItem Header="File">
-                <MenuItem Header="_Products" />
+                <MenuItem x:Name="menuitemProducts" Header="_Products" Click="menuitemProducts_Click" />
                 <Separator />
                 <MenuItem Header="E_xit" />
             </MenuItem>
@@ -28,6 +28,10 @@
             </MenuItem>
         </Menu>
         
-        <local:ProductDetailControl Grid.Column="0" Grid.Row="1"/>
+        <!--This codeline loads the user control static-->
+        <!--<local:ProductDetailControl Grid.Column="0" Grid.Row="1" />-->
+        <Grid x:Name="contentArea" Grid.Column="0" Grid.Row="1"  />
+        
+        
     </Grid>
 </Window>
