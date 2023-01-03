@@ -254,7 +254,7 @@ https://www.youtube.com/watch?v=oSeYvMEH7jc-->
         <TextBlock x:Name="myTextBlock"></TextBlock>
     </StackPanel>-->
 
-    <Grid>
+    <!--<Grid>
         <DatePicker
             SelectedDate="12/16/1979" 
             SelectedDateFormat="Long" 
@@ -262,7 +262,7 @@ https://www.youtube.com/watch?v=oSeYvMEH7jc-->
             >
             
         </DatePicker>
-    </Grid>
+    </Grid>-->
 
 </Window>
 

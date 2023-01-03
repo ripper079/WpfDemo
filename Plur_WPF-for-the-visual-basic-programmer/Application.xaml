@@ -2,8 +2,11 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:Plur_WPF_for_the_visual_basic_programmer"
+    xmlns:sys="clr-namespace:System.Windows;assembly=PresentationFramework"           
     StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
+        <sys:Thickness x:Key="StdMarginSmall">4</sys:Thickness>
+        <sys:Thickness x:Key="StdMarginMedium">8</sys:Thickness>
+        <sys:Thickness x:Key="StdMarginLarge">16</sys:Thickness>
     </Application.Resources>
 </Application>

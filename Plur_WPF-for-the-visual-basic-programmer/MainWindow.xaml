@@ -29,8 +29,8 @@
         </Menu>
         
         <!--This codeline loads the user control static-->
-        <!--<local:ProductDetailControl Grid.Column="0" Grid.Row="1" />-->
-        <Grid x:Name="contentArea" Grid.Column="0" Grid.Row="1"  />
+        <local:ProductDetailControl Grid.Column="0" Grid.Row="1" Margin="{StaticResource MarginLarge}"/>
+        <!--<Grid x:Name="contentArea" Grid.Column="0" Grid.Row="1"  />-->
         
         
     </Grid>
