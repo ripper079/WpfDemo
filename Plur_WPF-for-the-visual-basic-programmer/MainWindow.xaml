@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:Plur_WPF_for_the_visual_basic_programmer"
         mc:Ignorable="d"
         Title="WPF in Visual Basic" Height="600" Width="1000" MinWidth="300" MinHeight="300">
-    <Grid x:Name="gridContentArea">
+    <Grid x:Name="gridContentArea" 
+          Background="{StaticResource gridBackgroundColor}"
+          >
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
@@ -29,8 +31,10 @@
         </Menu>
         
         <!--This codeline loads the user control static-->
-        <local:ProductDetailControl Grid.Column="0" Grid.Row="1" Margin="{StaticResource MarginLarge}"/>
-        <!--<Grid x:Name="contentArea" Grid.Column="0" Grid.Row="1"  />-->
+        <!--<local:ProductDetailControl Grid.Column="0" Grid.Row="1" />-->
+        
+        <Grid x:Name="contentArea" Grid.Column="0" Grid.Row="1"                
+        />
         
         
     </Grid>

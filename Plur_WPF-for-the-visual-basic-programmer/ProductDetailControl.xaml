@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:Plur_WPF_for_the_visual_basic_programmer"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
-    <Grid>
+    <Border Style="{StaticResource screenBorder}">
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -48,5 +48,5 @@
         </ComboBox>
 
     </Grid>
-
+    </Border>
 </UserControl>

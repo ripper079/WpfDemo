@@ -5,8 +5,33 @@
     xmlns:sys="clr-namespace:System.Windows;assembly=PresentationFramework"           
     StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--For convenience-->
         <sys:Thickness x:Key="StdMarginSmall">4</sys:Thickness>
         <sys:Thickness x:Key="StdMarginMedium">8</sys:Thickness>
         <sys:Thickness x:Key="StdMarginLarge">16</sys:Thickness>
+        <sys:Thickness x:Key="StdPaddingSmall">4</sys:Thickness>
+        <sys:Thickness x:Key="StdPaddingMedium">8</sys:Thickness>
+        <sys:Thickness x:Key="StdPaddingLarge">16</sys:Thickness>
+
+        <!--Main background-->
+        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" x:Key="gridBackgroundColor">
+            <GradientStop Color="Gray" Offset="0" />
+            <GradientStop Color="DarkGray" Offset="1" />
+        </LinearGradientBrush>
+        <!--User control background-->
+        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1" x:Key="screenBackgroundColor">
+            <GradientStop Color="DarkGray" Offset="0" />
+            <GradientStop Color="Gray" Offset="1" />
+        </LinearGradientBrush>
+        <!-- User control Screen Broder Style  -->
+        <Style x:Key="screenBorder" TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource screenBackgroundColor}" />
+            <Setter Property="BorderBrush" Value="#ff5f5f5f" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        
     </Application.Resources>
 </Application>
