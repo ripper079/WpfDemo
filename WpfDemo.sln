@@ -19,6 +19,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfICommandSingular", "WpfI
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfViewModelMultipleViews", "WpfViewModelMultipleViews\WpfViewModelMultipleViews.vbproj", "{8551073B-277F-420F-B086-FDAE26C549FC}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfINotifyPropertyICommand", "WpfINotifyProperty\WpfINotifyPropertyICommand.vbproj", "{E779BACB-9D0B-4C01-A2D1-4620F9796C7E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfPagesAndNavigation", "WpfPagesAndNavigation\WpfPagesAndNavigation.vbproj", "{CC622076-06E7-4EC8-AFF0-B97D5255294B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{8551073B-277F-420F-B086-FDAE26C549FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8551073B-277F-420F-B086-FDAE26C549FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8551073B-277F-420F-B086-FDAE26C549FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E779BACB-9D0B-4C01-A2D1-4620F9796C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E779BACB-9D0B-4C01-A2D1-4620F9796C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E779BACB-9D0B-4C01-A2D1-4620F9796C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E779BACB-9D0B-4C01-A2D1-4620F9796C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC622076-06E7-4EC8-AFF0-B97D5255294B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC622076-06E7-4EC8-AFF0-B97D5255294B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC622076-06E7-4EC8-AFF0-B97D5255294B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC622076-06E7-4EC8-AFF0-B97D5255294B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

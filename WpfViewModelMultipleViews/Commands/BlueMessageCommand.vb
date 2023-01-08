@@ -1,4 +1,4 @@
-﻿Public Class MessageCommand
+﻿Public Class BlueMessageCommand
     Implements ICommand
 
     Public Event CanExecuteChanged As EventHandler Implements ICommand.CanExecuteChanged
@@ -15,5 +15,4 @@
     Public Sub Execute(parameter As Object) Implements ICommand.Execute
         _execute.Invoke()
     End Sub
-
 End Class

@@ -1,0 +1,334 @@
+﻿<Page x:Class="PageVeriCreate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:system="clr-namespace:System;assembly=mscorlib"
+      xmlns:local="clr-namespace:WpfPagesAndNavigation"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageVeriCreate" 
+      Loaded="Page_Loaded">
+    <Grid>
+        <Border Style="{StaticResource frameBorder}">
+            
+            
+            <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="CREATE PAGE for Age Verification" 
+                       Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="9"
+                       VerticalAlignment="Top"  HorizontalAlignment="Center" FontSize="36" 
+                       Style="{StaticResource textBlockHeader}" />
+
+            <!-- First name -->
+            <TextBlock Grid.Row="1" Grid.Column="1" 
+                                   FontSize="14" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="{StaticResource Content.Static.Color}"
+                                   HorizontalAlignment="Right" VerticalAlignment="Center" 
+                                   Margin="0,0,4,0" 
+                                   >
+                                   First Name
+            </TextBlock>
+            <TextBox x:Name="txtboxInputFirstName" 
+                                 Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" 
+                                 Margin="8" 
+                                 FontSize="14"                                  
+                                 HorizontalContentAlignment="Left" VerticalContentAlignment="Center"                                  
+                                 Style="{StaticResource txtBoxFormInputStyle}"
+                                 >
+            </TextBox>
+            <!-- Last Name -->
+            <TextBlock Grid.Row="2" Grid.Column="1" 
+                                   FontSize="14" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="{StaticResource Content.Static.Color}"
+                                   HorizontalAlignment="Right" VerticalAlignment="Center" 
+                                   Margin="0,0,4,0" 
+                                   >
+                                   Last Name
+            </TextBlock>
+            <TextBox x:Name="txtboxInputLastName" 
+                                 Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" 
+                                 Margin="8" 
+                                 FontSize="14" 
+                                 Padding="2"
+                                 HorizontalContentAlignment="Left" VerticalContentAlignment="Center"                                  
+                                 Style="{StaticResource txtBoxFormInputStyle}"
+            >
+            </TextBox>
+            
+            <!-- Last name requirement -->
+            <StackPanel x:Name="stkLastNameRequirement" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2"
+                        Background="{StaticResource BackgroundElement.Static.Color}" 
+                        HorizontalAlignment="Right"
+                        Margin="0 0 8 0"
+                        >
+                <Label x:Name="lblChkBoxes" 
+                       HorizontalAlignment="Right"
+                       Foreground="{StaticResource Content.Static.Color}"                        
+                       FontWeight="Semibold">Require Last Name</Label>
+                <CheckBox x:Name="chkAddRed" 
+                          HorizontalAlignment="Right" 
+                          Foreground="{StaticResource Content.Static.Color}" 
+                          Margin="0 0 4 0"                          
+                          IsChecked="True">YES
+                </CheckBox>
+            </StackPanel>
+
+            <!--Endpoint ID-->
+            <TextBlock Grid.Row="1" Grid.Column="6" 
+                                   FontSize="14" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="{StaticResource Content.Static.Color}"
+                                   HorizontalAlignment="Right" VerticalAlignment="Center" 
+                                   Margin="0,0,4,0" 
+                                   >
+                                   EndpointID:
+            </TextBlock>
+            <ComboBox x:Name="cmbEndpointId" Grid.Row="1" Grid.Column="7" Margin="8"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+            >
+            </ComboBox>
+            <!--Operator ID-->
+            <TextBlock Grid.Row="2" Grid.Column="6" 
+                                   FontSize="14" 
+                                   FontWeight="SemiBold" 
+                                   Foreground="{StaticResource Content.Static.Color}"
+                                   HorizontalAlignment="Right" VerticalAlignment="Center" 
+                                   Margin="0,0,4,0" 
+                                   >
+                                   OperatorID:
+            </TextBlock>
+            <ComboBox x:Name="cmbOperatorId" Grid.Row="2" Grid.Column="7" Margin="8"
+                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+            >
+            </ComboBox>
+            
+                        
+            <!-- User based on -->
+            <Border Grid.Column="1" Grid.Row="5" Grid.RowSpan="2" 
+                    Background="{StaticResource BackgroundElement.Static.Color}"  BorderBrush="{StaticResource Border.Static.Color}" BorderThickness="2">
+                <StackPanel x:Name="stkUserBased" >
+                    <Label x:Name="lblUserBased" 
+                           FontWeight="SemiBold" Foreground="{StaticResource Content.Static.Color}"
+                           >User based on</Label>
+                    <RadioButton x:Name="radioUserBasedRoom" Foreground="{StaticResource Content.Static.Color}" GroupName="grpBasedOn" Content="Room" IsChecked="true" Checked="radioUserBasedLova_Checked"></RadioButton>
+                    <RadioButton x:Name="radioUserBasedLova" Foreground="{StaticResource Content.Static.Color}" GroupName="grpBasedOn" Content="Lova" Checked="radioUserBasedLova_Checked"></RadioButton>
+                    <RadioButton x:Name="radioUserBasedOther" Foreground="{StaticResource Content.Static.Color}" GroupName="grpBasedOn" Content="Other" Checked="radioUserBasedLova_Checked"></RadioButton>
+                </StackPanel>
+            </Border>
+            
+            <!-- When Other is selected -->
+            <Border x:Name="brdOtherSelected" Grid.Row="5" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" 
+                    Background="{StaticResource BackgroundElement.Static.Color}"  BorderBrush="{StaticResource Border.Static.Color}" BorderThickness="2"
+                    Visibility="Collapsed"
+                    >
+                <Grid x:Name="gridOtherSpecify" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" 
+                                   FontSize="14"                                    
+                                   FontWeight="SemiBold" 
+                                   Foreground="{StaticResource Content.Static.Color}" 
+                                   Background="{StaticResource BackgroundElement.Static.Color}"
+                                   HorizontalAlignment="Center" VerticalAlignment="Top" 
+                                   Margin="0,0,4,0" 
+                                   >
+                                   Specify
+                </TextBlock>
+
+                <TextBox x:Name="txtboxInputSpecify" Grid.Row="1" Grid.Column="0"                                 
+                                 Margin="0" 
+                                 FontSize="14" 
+                                 Padding="0"
+                                 TextWrapping="Wrap"    
+                                 BorderBrush="{StaticResource BackgroundElement.Static.Color}" 
+                                 Background="{StaticResource BackgroundElement.Static.Color}" 
+                                 Foreground="{StaticResource Content.Static.Color}" 
+                >
+                </TextBox>
+            </Grid>
+
+            </Border>
+
+            <!--When Lova is selected-->
+            <Border x:Name="brdLovaSelected" 
+                    Grid.Row="5" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2" 
+                    Background="{StaticResource BackgroundElement.Static.Color}"  BorderBrush="{StaticResource Border.Static.Color}" BorderThickness="2" 
+                    Visibility="Collapsed"
+                    >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0" 
+                                   FontSize="14"                                    
+                                   FontWeight="SemiBold" 
+                                   Foreground="{StaticResource Content.Static.Color}" 
+                                   Background="{StaticResource BackgroundElement.Static.Color}"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                   Margin="0,0,4,0" 
+                                   >
+                                   Force Biometrics
+                    </TextBlock>
+                    <!--Checkboxes for force Biometrics-->
+                    <StackPanel x:Name="stkForceBiometric" 
+                                Orientation="Horizontal" Grid.Row="1" Grid.Column="0" 
+                                VerticalAlignment="Top" HorizontalAlignment="Center" 
+                                Margin="8" 
+                                >
+                        <!--<Label x:Name="lblForceBiometric" 
+                           FontWeight="SemiBold" Foreground="{StaticResource Content.Static.Color}"
+                           >User based on</Label>-->
+                        <RadioButton Margin="0 0 10 0" x:Name="radioForceBiometricYes" Foreground="{StaticResource Content.Static.Color}" GroupName="grpForceBiometric" Content="YES" IsChecked="true" ></RadioButton>
+                        <RadioButton Margin="10 0 0 0" x:Name="radioForceBiometricNo" Foreground="{StaticResource Content.Static.Color}" GroupName="grpForceBiometric" Content="NO"></RadioButton>
+                    </StackPanel>
+
+                </Grid>
+            </Border>
+
+            <!-- Email Contact Section -->
+            <TextBlock Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="2" 
+                                   VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                                    FontSize="16"
+                                   Foreground="{StaticResource Content.Static.Color}"
+                                   Style="{StaticResource textBlockHeader}"
+                                   >
+                                   Contact Section (Email)
+            </TextBlock>
+            <!-- Ska vara textboxar enligt Johan -->
+            <!--<ItemsControl Grid.Row="6" Grid.Column="6" Grid.RowSpan="2"  
+                Foreground="{StaticResource Content.Static.Color}" Background="{StaticResource BackgroundElement.Static.Color}" BorderBrush="{StaticResource Border.Static.Color}" BorderThickness="2"
+                Padding="5" 
+                      
+                >
+                <system:String>Email Contact Person 1</system:String>
+                <system:String>Email Contact Person 2</system:String>
+                <system:String>EmailContact Person 3</system:String>
+                <system:String>Email Contact Person 4</system:String>
+                <system:String>Email Contact Person 5</system:String>
+            </ItemsControl>
+            <ItemsControl Grid.Row="6" Grid.Column="7" Grid.RowSpan="2" 
+                Foreground="{StaticResource Content.Static.Color}" Background="{StaticResource BackgroundElement.Static.Color}" BorderBrush="{StaticResource Border.Static.Color}" BorderThickness="2"
+                Padding="5" 
+                      
+                >
+                <system:String>Email Init Person 1</system:String>
+                <system:String>Email Init Person 2</system:String>
+                <system:String>Email Init Person 3</system:String>
+                <system:String>Email Init Person 4</system:String>
+                <system:String>Email Init Person 5</system:String>
+            </ItemsControl>-->
+            <!-- Email to contact persons -->
+            <DockPanel Grid.Row="4" Grid.Column="6" Grid.RowSpan="2" Height="Auto" LastChildFill="True">
+                    <TextBlock DockPanel.Dock="Top" Height="Auto"
+                            Foreground="{StaticResource Content.Static.Color}" 
+                            Style="{StaticResource textBlockHeader}"
+                            >Person/Customer
+                </TextBlock>
+                <ScrollViewer>
+                    <TextBox 
+                            Style="{StaticResource txtBoxFormInputStyle}" 
+                            Margin="0" Padding="0"
+                            ToolTip="Enter email(s) to contact person(s)"
+                            AcceptsReturn="True" />
+                </ScrollViewer>
+            </DockPanel>
+            <!-- Email to Personnel with Init Access -->
+            <DockPanel Grid.Row="4" Grid.Column="7" Grid.RowSpan="2" Height="Auto" LastChildFill="True">
+                    <TextBlock DockPanel.Dock="Top" Height="Auto"
+                            Foreground="{StaticResource Content.Static.Color}" 
+                            Style="{StaticResource textBlockHeader}"
+                            >Personnel
+                    </TextBlock>
+                    <ScrollViewer>
+                        <TextBox 
+                        Style="{StaticResource txtBoxFormInputStyle}" 
+                        Margin="0" Padding="0" 
+                        ToolTip="Enter email(s) to personnel with inital access"
+                        AcceptsReturn="True" />
+                    </ScrollViewer>
+            </DockPanel>
+            
+            <!--Optional code expiration date-->    
+            <DockPanel Grid.Row="7" Grid.Column="1" Grid.RowSpan="2" Height="Auto" >
+                <TextBlock DockPanel.Dock="Top" Height="Auto"
+                            Foreground="{StaticResource Content.Static.Color}" 
+                            Style="{StaticResource textBlockHeader}" 
+                            Margin="0" Padding="0" 
+                            FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Right" 
+                        >Code Expiration
+                </TextBlock>
+                <CheckBox x:Name="chkAddDaysToCodeExpir" DockPanel.Dock="Top" Height="Auto"  
+                                HorizontalAlignment="Right" 
+                                Foreground="{StaticResource Content.Static.Color}" 
+                                Margin="0 0 4 0"                          
+                                IsChecked="False" Click="chkAddDaysToCodeExpir_Click" >Add days
+                </CheckBox>
+                    <ComboBox x:Name="cmbAddDaysCodexpiration" Visibility="Collapsed"
+                          HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    <ComboBoxItem Content="1" IsSelected="True" />
+                    <ComboBoxItem Content="2" />
+                    <ComboBoxItem Content="3" />
+                </ComboBox>
+            </DockPanel>
+
+            <Border Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" 
+                Background="{StaticResource BackgroundElement.Static.Color}"  BorderBrush="{StaticResource Border.Static.Color}" BorderThickness="2">
+                <StackPanel x:Name="stkUserBasedqweet" >
+                    <Label x:Name="lblUserBasedqwert" 
+                        FontWeight="SemiBold" Foreground="{StaticResource Content.Static.Color}"
+                        >User based
+                    </Label>
+                    <CheckBox x:Name="chkBoxUserBasedRoom" Foreground="{StaticResource Content.Static.Color}" Content="Room" />
+                    <CheckBox x:Name="chkBoxUserBasedLova" Foreground="{StaticResource Content.Static.Color}" Content="Lova" />
+                    <CheckBox x:Name="chkBoxUserBasedOther" Foreground="{StaticResource Content.Static.Color}" Content="Other" />
+                </StackPanel>
+            </Border>
+
+                <!-- Button Create/OK --> 
+            <Button x:Name="btnOkForCreate" Content="OK" 
+                    Grid.Row="7" Grid.Column="7" 
+                    Style="{StaticResource btnStandardStyle}" 
+                    Click="btnOkForCreate_Click"
+            />
+
+            </Grid>
+            
+            
+        </Border>
+    </Grid>
+</Page>

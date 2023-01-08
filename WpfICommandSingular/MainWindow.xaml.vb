@@ -3,5 +3,4 @@
         'Binding
         DataContext = New MessageViewModel()
     End Sub
-
 End Class

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WpfViewModelMultipleViews"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Purple">
-            
+    <Grid Background="MediumPurple">
+        <Label Content="PURPLE View" FontSize="48" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </UserControl>

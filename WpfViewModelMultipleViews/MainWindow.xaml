@@ -7,19 +7,19 @@
         xmlns:viewmodels="clr-namespace:WpfViewModelMultipleViews" 
         xmlns:views="clr-namespace:WpfViewModelMultipleViews"    
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" 
+        Title="Client Handler" Height="450" Width="800" 
         Loaded="Window_Loaded"
         >
 
 
 
     <Window.Resources>
+        <DataTemplate x:Name="defaultmainViewTemplate" DataType="{x:Type viewmodels:DefaultMainViewModel}">
+            <views:DefaultMainView DataContext="{Binding}" />
+        </DataTemplate>
+                
         <DataTemplate x:Name="redViewTemplate" DataType="{x:Type viewmodels:RedViewModel}">
             <views:RedView DataContext="{Binding}" />
-        </DataTemplate>
-
-        <DataTemplate x:Name="blueViewTemplate" DataType="{x:Type viewmodels:BlueViewModel}">
-            <views:BlueView DataContext="{Binding}" />
         </DataTemplate>
 
         <DataTemplate x:Name="orangeViewTemplate" DataType="{x:Type viewmodels:OrangeViewModel}">
@@ -30,10 +30,18 @@
             <views:PurpleView DataContext="{Binding}" />
         </DataTemplate>
 
+        <DataTemplate x:Name="blueViewTemplate" DataType="{x:Type viewmodels:BlueViewModel}">
+            <views:BlueView DataContext="{Binding}" />
+        </DataTemplate>
+
+        <DataTemplate x:Name="AddPersonViewTemplate" DataType="{x:Type viewmodels:AddPersonFormViewModel}">
+            <views:AddPersonFormView DataContext="{Binding}" />
+        </DataTemplate>
+
     </Window.Resources>
-    
-    
-    <Grid>
+
+
+    <Grid Background="{StaticResource gradiantWindowBackgroundColor}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
@@ -42,23 +50,42 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        <DockPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Background="LightGray">
-            <StackPanel>
-                <Button Content="Red View" Click="RedView_Click" />
-                <Button Content="Blue View" Click="BlueView_Click" />
-                <Button Content="Orange View" Click="OrangeView_Click" />
-                <Button Content="Purple View" Click="PurpleView_Click"  />
+        <!--<DockPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Background="#353839">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Home" FontWeight="Bold" Click="MainHomeView_Click" Style="{StaticResource btnStandardStyle}" />
+                <Button Content="Red View" Background="Red" FontWeight="Bold" Foreground="NavajoWhite" Click="RedView_Click" />
+                <Button Content="Orange View"  Background="Orange" FontWeight="Bold" Foreground="NavajoWhite"  Click="OrangeView_Click" />
+                <Button Content="Purple View" Background="MediumPurple" FontWeight="Bold" Foreground="NavajoWhite"  Click="PurpleView_Click"  />
+                <Button Content="Blue View" Background="Blue" FontWeight="Bold" Foreground="NavajoWhite" Click="BlueView_Click" />
+                <Button Content="Create" FontWeight="Bold" Click="AddPersonForm_Click" Style="{StaticResource btnStandardStyle}" />
+                <Button Content="Edit" FontWeight="Bold" Click="AddPersonForm_Click" Style="{StaticResource btnStandardStyle}" />                
             </StackPanel>
-        </DockPanel>
-        
+        </DockPanel>-->
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Button Content="« Home" Grid.Column="0" Grid.Row="0" FontWeight="Bold" Click="MainHomeView_Click" Style="{StaticResource btnStandardStyle}" />
+            <StackPanel Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Create" FontWeight="Bold" Click="AddPersonForm_Click" Style="{StaticResource btnStandardStyle}" />
+                <Button Content="Edit" FontWeight="Bold"  Style="{StaticResource btnStandardStyle}" Click="EditPersonForm_Click" />
+            </StackPanel>
+        </Grid>
+
         <!-- Bind it to what ever it is -->
-        <ContentControl Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="5" Content="{Binding}" />
+        <ContentControl Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="4" Content="{Binding}" />
     </Grid>
 </Window>

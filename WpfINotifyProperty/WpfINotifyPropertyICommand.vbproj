@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8551073B-277F-420F-B086-FDAE26C549FC}</ProjectGuid>
+    <ProjectGuid>{E779BACB-9D0B-4C01-A2D1-4620F9796C7E}</ProjectGuid>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfViewModelMultipleViews</RootNamespace>
-    <AssemblyName>WpfViewModelMultipleViews</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>WpfINotifyProperty</RootNamespace>
+    <AssemblyName>WpfINotifyProperty</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -21,7 +21,7 @@
     <DefineTrace>true</DefineTrace>
     <IncrementalBuild>true</IncrementalBuild>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>WpfViewModelMultipleViews.xml</DocumentationFile>
+    <DocumentationFile>WpfINotifyProperty.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -33,7 +33,7 @@
     <IncrementalBuild>false</IncrementalBuild>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>WpfViewModelMultipleViews.xml</DocumentationFile>
+    <DocumentationFile>WpfINotifyProperty.xml</DocumentationFile>
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -68,37 +68,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Commands\AddPersonCommand.vb" />
-    <Compile Include="Commands\BlueMessageCommand.vb" />
+    <Compile Include="Commands\ButtonCommand.vb" />
+    <Compile Include="ViewModels\ButtonViewModel.vb" />
     <Compile Include="Models\Person.vb" />
-    <Compile Include="ViewModels\AddPersonFormViewModel.vb" />
-    <Compile Include="ViewModels\BlueViewModel.vb" />
-    <Compile Include="ViewModels\DefaultMainViewModel.vb" />
-    <Compile Include="ViewModels\EditPersonFormViewModel.vb" />
-    <Compile Include="ViewModels\OrangeViewModel.vb" />
-    <Compile Include="Views\AddPersonFormView.xaml.vb">
-      <DependentUpon>AddPersonFormView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\BlueView.xaml.vb">
-      <DependentUpon>BlueView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DefaultMainView.xaml.vb">
-      <DependentUpon>DefaultMainView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\EditPersonFormView.xaml.vb">
-      <DependentUpon>EditPersonFormView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\OrangeView.xaml.vb">
-      <DependentUpon>OrangeView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PurpleView.xaml.vb">
-      <DependentUpon>PurpleView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\PurpleViewModel.vb" />
-    <Compile Include="ViewModels\RedViewModel.vb" />
-    <Compile Include="Views\RedView.xaml.vb">
-      <DependentUpon>RedView.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -111,34 +83,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\AddPersonFormView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\BlueView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\DefaultMainView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\EditPersonFormView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\OrangeView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\PurpleView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\RedView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Import Include="System.Threading.Tasks" />
@@ -190,6 +134,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
