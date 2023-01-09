@@ -23,6 +23,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfINotifyPropertyICommand"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfPagesAndNavigation", "WpfPagesAndNavigation\WpfPagesAndNavigation.vbproj", "{CC622076-06E7-4EC8-AFF0-B97D5255294B}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WpfTriggers", "WpfTriggers\WpfTriggers.vbproj", "{2D34F02E-901B-4C55-B182-80E9FA6A527A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{CC622076-06E7-4EC8-AFF0-B97D5255294B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC622076-06E7-4EC8-AFF0-B97D5255294B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC622076-06E7-4EC8-AFF0-B97D5255294B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D34F02E-901B-4C55-B182-80E9FA6A527A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D34F02E-901B-4C55-B182-80E9FA6A527A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D34F02E-901B-4C55-B182-80E9FA6A527A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D34F02E-901B-4C55-B182-80E9FA6A527A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
