@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTriggers"
         mc:Ignorable="d"
-        Title="Three types trigger = Property Triggers AND Data Triggers AND Event Triggers " Height="450" Width="800">
+        Title="Three types trigger = Property Triggers AND Data Triggers AND Event Triggers " Height="450" Width="1000">
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -25,6 +25,7 @@
         <!--Label section Just-->
         <Label FontSize="18" Content="DataTrigger" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" />
         <Label FontSize="18" Content="Property Trigger" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" />
+        <Label FontSize="18" Content="Event Trigger-TODO" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" />
 
 
         <!-- Data triggers -->
